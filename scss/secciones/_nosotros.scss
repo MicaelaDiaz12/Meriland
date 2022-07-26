@@ -1,0 +1,369 @@
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+    grid-template-areas:
+    "header"
+    "titulo"
+    "informacion"
+    "preguntas"
+    "footer ";
+     background: url(https://res.cloudinary.com/dyze2zmhy/image/upload/v1658193854/meriland/fondo_de_pantalla_frase_minimalista_beis_1_qvglk8.jpg);
+     background-repeat: no-repeat;
+     width: 100%;
+
+      header{
+        grid-area:header;
+        font-family:$nav;
+        height: 10vh;
+        width: 100%;
+        padding-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.603);
+    
+        .animate__animated.animate__fadeInDown {
+          --animate-duration: 2.5s;
+        }
+    
+      ul {
+    
+          li {
+            list-style: none;
+            margin-right: 15px;
+    
+            a {
+              color: rgb(255, 255, 255);
+              text-decoration: none;
+              font-size: 16px;
+    
+              &:hover{
+              padding-left: 10px;
+              color: #fff;
+              transition: .5s;
+              transform: scale(1.1);
+            }
+    
+            }
+          }
+        }
+    }
+
+        
+     .titulo{
+        grid-area: titulo; 
+        @extend %tamañodetitulo;
+       
+
+        .animate__animated.animate__fadeIn {
+            --animate-duration: 2.5s;
+          }
+
+        h1{
+           color: rgb(0, 0, 0);
+           font-family:$titulo;
+           font-weight: 600;
+        }
+     }
+        
+        .informacion{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            grid-area: informacion;
+            display: flex;
+            height: 1100px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .informacion_1{
+               background-color: rgb(186, 141, 135);
+               border-radius: 400px;
+               width: 440px;
+               height: 440px;
+               text-align: center;
+               display: flex;
+               justify-content: center;
+               flex-direction: column;
+               align-items: center;
+               box-shadow:-10px -10px 30px  rgba(255, 255, 255, 0.4),
+                           10px 10px 30px rgba(0, 0, 0, 0.40);
+               
+               
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 22px;
+                width: 240px;
+                
+            }         
+        
+           }
+
+           .informacion_2{
+               background-color: rgb(227, 180, 174);
+               text-align: center;
+               align-self: center;
+               border-radius: 400px;
+               width: 440px;
+               height: 440px;
+               display: flex;
+               position: absolute;
+               justify-content: center;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               box-shadow:10px 10px 30px rgba(0, 0, 0, 0.40);
+
+               h2{
+                font-family:$titulo;
+                font-size: 27px;
+               }
+
+               p{
+                  text-align: center;
+                  font-family:$descripcion;
+                  font-size: 20px;
+                  width: 350px;
+               }
+            } 
+            
+            .informacion_3{
+               background-color: rgb(223, 191, 186);
+                text-align: center;
+                align-self: flex-end;
+                border-radius: 400px;
+                width: 440px;
+                height: 440px;
+                text-align: center;
+                
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                box-shadow:10px 10px 30px rgba(0, 0, 0, 0.40);
+            
+ 
+                h2{
+                 font-family:$titulo;
+                 font-size: 27px;
+                }
+ 
+                p{
+                  font-family:$descripcion;
+                  font-size: 22px;
+                  width: 350px;
+                  
+                }  
+            } 
+        
+        }
+        .preguntas{
+            grid-area: preguntas;
+            margin:70px 15px 70px 15px ;            
+
+            .preguntas__titulo{
+                margin: 20px;
+            }
+        }
+            
+    }
+
+
+
+@media (max-width:779px){   
+   .nosotros{  
+
+        .informacion{
+            height: 1100px;
+         
+           .informacion_1{
+            width: 397px;
+            height: 386px;
+
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 18px;
+                width: 273px;
+            }         
+           }
+
+           .informacion_2{
+            width: 397px;
+            height: 386px;
+
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 18px;
+                width: 273px;
+            }         
+           }
+
+           .informacion_3{
+            width: 397px;
+            height: 386px;
+
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 18px;
+                width: 273px;
+            }         
+           }
+
+           
+        }
+    }
+
+}    
+
+@media (max-width:425px){
+    .nosotros{  
+
+        .informacion{
+            height: 883px;
+         
+           .informacion_1{
+            width: 345px;
+            height: 332px;
+
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 16px;
+                width: 267px;
+            }
+
+           }
+
+           .informacion_2{
+            width: 345px;
+            height: 332px;
+
+
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 16px;
+                width: 267px;;
+            }  
+
+           }
+
+           .informacion_3{
+            width: 345px;
+            height: 332px;
+
+             
+            h2{
+                font-family:$titulo;
+                
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 16px;
+                 width: 267px;
+            }       
+
+           }   
+       
+        }
+
+        .preguntas{
+            grid-area: preguntas;
+            margin: 207px 15px 10px 15px;
+            height: 500px;            
+        }
+    }
+}
+@media (max-width:355px){
+    .nosotros{  
+
+        .informacion{
+            height: 883px;
+         
+           .informacion_1{
+            width: 316px;
+            height: 307px;
+
+            h2{
+                font-family:$titulo;
+                font-size: 20px;
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 16px;
+                width: 267px;
+            }
+
+           }
+
+           .informacion_2{
+            width: 316px;
+            height: 307px;
+
+            h2{
+                font-family:$titulo;
+                font-size: 20px;
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 16px;
+                width: 267px;;
+            }  
+
+           }
+
+           .informacion_3{
+            width: 316px;
+            height: 307px;
+
+             
+            h2{
+                font-family:$titulo;
+                font-size: 20px;
+            }
+
+            p{
+                font-family:$descripcion;
+                font-size: 16px;
+                 width: 267px;
+            }       
+
+           }   
+       
+        }
+
+        .preguntas{
+            grid-area: preguntas;
+            margin: 207px 15px 10px 15px;
+            height: 537px;            
+        }
+    }
+}

@@ -1,0 +1,146 @@
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "informacion__general  redes"
+    "informacion__general  redes"
+    "derechos derechos";
+        
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(41, 41, 41) 50%, rgba(97,97,97,1) 100%);
+    
+
+    .informacion__general{
+        grid-area: informacion__general;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    
+        div{
+
+           a{
+              color: azure;
+              text-align: none;
+              text-decoration: none;
+            }
+
+           
+            }
+             .medios-de-pago{
+               p{
+                color: azure;
+                margin: 0px;
+              }
+
+               img{
+                width: 31px;
+                height: 29px;
+               }
+        }
+    }
+    
+        
+    .redes{
+        grid-area: redes;
+            display: flex; 
+            flex-direction: column;
+            align-items: flex-end;
+
+         i {
+            margin-top: 15px;
+            font-size: 35px;
+            margin-right: 15px;
+            color: aliceblue;
+              
+
+            &:hover{
+                transition:.3s;
+                transform: scale(1.2);
+            }
+        }
+    }        
+
+    .derechos{
+        grid-area: derechos;
+       text-align: center;
+       color: rgb(255, 255, 255);
+    }
+}
+
+@media (max-width:779px){
+    footer {
+
+       .informacion__general{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+    
+            div{
+
+               a{
+                  color: azure;
+                  text-align: none;
+                  text-decoration: none;
+                  font-size: 12px;
+                }
+
+                p{
+                  color: azure;
+                  font-size: 15px;
+                }
+            }        
+    
+           .redes{
+
+                i {
+                  margin-top: 15px;
+                  font-size: 25px;
+                  margin-right: 15px;
+                  color: aliceblue;
+              
+
+                    &:hover{
+                      transition:.3s;
+                      transform: scale(1.2);
+                    }
+                }
+            }
+        }
+ 
+         .derechos{
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+@media (max-width:577px){
+   footer{
+
+       .informacion__general{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+      
+        .redes{
+          display: flex; 
+          justify-content: center;
+          flex-direction: column;
+
+          i {
+          font-size: 30px;
+              
+          }
+        }        
+
+        .derechos{
+          font-size: 15px;
+        }
+    } 
+}

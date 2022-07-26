@@ -1,0 +1,200 @@
+.seccion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header"
+        "titulo"
+        "formulario "
+        "footer ";
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(211, 158, 158) 51%, rgb(214, 117, 117) 100%);
+
+
+        header{
+            grid-area:header;
+            font-family:$nav;
+            height: 10vh;
+            width: 100%;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.603);
+        
+            .animate__animated.animate__fadeInDown {
+              --animate-duration: 2.5s;
+            }
+        
+            ul {
+        
+                li {
+                   margin-right: 15px;
+                   list-style: none;
+                   
+        
+                    a {
+                      color: rgb(255, 255, 255);
+                      text-decoration: none;
+                      font-size: 16px;
+        
+                       &:hover{
+                          padding-left: 10px;
+                          color: #fff;
+                          transition: .5s;
+                          transform: scale(1.1);
+                        }
+        
+                    }
+                }
+            }
+        }
+
+    .titulo{
+        @extend %tamañodetitulo;
+
+        .animate__animated.animate__fadeIn {
+            --animate-duration: 2.5s;
+          }
+
+        h1{
+           color: rgb(0, 0, 0);
+           font-family:$titulo;
+        }
+        
+    }
+
+    .formulario {
+        grid-area: formulario;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-bottom: 70px;
+
+
+        form {
+            border-radius: 23px;
+            background-color: rgb(255, 255, 255);
+            padding: 81px 70px;
+
+        input {
+            margin-bottom: 20px;
+            width: 250px;
+            height: 39px;
+            outline: none;
+            animation-duration: 5s;
+            transition: all 2s;
+            
+
+                &:hover {
+                    transition: .9s;
+                    transform: scale(1.1);
+
+                }
+        }
+        
+            ul{
+
+                li{
+                   
+               
+                    a{
+                        text-decoration: none;
+                        color: rgb(0, 0, 0);
+                    }  
+                }
+            }   
+
+           
+                .enviar{
+                   padding: 9px 35px;
+                   border:  1px solid black;
+                   margin-top:15px;
+
+                    &:hover{
+                         background: linear-gradient(180deg, rgb(211, 158, 158) 50%, rgb(214, 117, 117) 100%);
+                    }
+                }    
+        }  
+    }
+}
+    
+
+@media (max-width:779px){
+    .seccion{
+
+        .formulario{
+            img{
+                width: 0px;
+                height: 0px;
+            }
+
+            form {
+                padding: 70px 120px 70px 120px;
+
+                input{
+                    width: 220px;
+                    height: 40px;
+                }
+                .enviar{
+                    width: 150px;
+
+                }
+            }    
+        }    
+    }
+}
+
+@media (max-width:450px){
+    .seccion{
+
+        .titulo{
+
+            h1{
+                font-size: 25px ;
+            }
+        }
+
+        .formulario{
+             height: 80vh;
+
+             img{
+               width: 0px;
+               height: 0px;
+             }
+
+            form {
+                padding: 77px 46px 90px 60px;
+                position: absolute;
+                animation-name:none;
+
+                input{
+                    width: 200px;
+                    height: 38px;
+                    animation-name:none;
+                }
+            }    
+        }    
+    }
+}
+
+@media (max-width:360px){
+    .seccion{
+
+        .formulario{
+
+            form {
+                padding: 70px 40px;
+
+                input{
+                    width: 220px;
+                    height: 35px;
+                }
+                .enviar{
+                    width: 78px;
+                    height: 32px;
+                    padding: 0px 10px;
+                    font-size: 12px;
+                }
+            }    
+        }    
+    }
+}

@@ -1,0 +1,156 @@
+.tienda {
+    display: grid;
+    grid-template-rows: 0fr 0fr 1fr 0fr;
+    grid-template-columns: 0.9fr 0.9fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header header"
+        "titulo titulo titulo titulo"
+        "menu prendas prendas prendas"
+        "footer footer footer footer";
+
+        header{
+            grid-area:header;
+            font-family:$nav;
+            height: 10vh;
+            width: 1350;
+            padding-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.603);
+        
+        
+          ul {
+        
+              li {
+                list-style: none;
+                margin-right: 15px;
+        
+                a {
+                  color: rgb(255, 255, 255);
+                  text-decoration: none;
+                  font-size: 16px;
+        
+                  &:hover{
+                  padding-left: 10px;
+                  color: #fff;
+                  transition: .5s;
+                  transform: scale(1.1);
+                }
+        
+                }
+              }
+            }
+        }
+
+        .titulo{
+            @extend %tamañodetitulo;
+
+            .animate__animated.animate__fadeIn {
+                --animate-duration: 2.5s;
+              }
+    
+            h1{
+               color: rgb(0, 0, 0);
+               font-family:$titulo;
+            }
+            
+        }
+
+    .menu {
+        background-color: #e6e6e6;
+        grid-area: menu;
+        border: solid 1px #a8a7a7;
+        padding: 20px;
+        width: 241px;
+        height: 600px;
+        margin-left: 7px;
+        margin-top: 50px;
+        box-shadow: 5px 9px rgba(207, 207, 207, 0.767);
+
+        h3 {
+            padding-bottom: 15px;
+            font-family: $titulo;
+        }
+         
+    }
+
+    .prendas {
+        grid-area: prendas;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 50px 0px 35px 15px;
+        font-family: $titulo;
+
+        .producto {
+            border: solid 0.5px rgb(209, 209, 209);
+            margin-bottom: 25px;
+            transition: all 1s;
+
+            &:hover {
+                transition: 0.6s;
+                transform: scale(1.1);
+            } 
+
+            a {
+               color: black;
+               text-decoration: none;
+            }
+
+            h3 {
+               margin: 15px;
+               font-size: 25px;
+            }
+
+              h4 {
+               margin-bottom: 15px;
+               margin-left: 15px;
+               font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width:779px){
+    .tienda{
+
+        .menu{
+            border: none;
+            width: 125px;
+            margin-top: 50px;
+            margin-left: 0px;
+            padding: 15px 0px 0px 15px;
+
+            li{
+                list-style: none;
+            }
+
+        }
+        .prendas{
+
+            margin-left: 0px;
+
+            .producto{
+                width: 150px;
+                justify-content: space-evenly;
+                margin: 5px;
+                height: 202px;
+
+                img{
+                    width: 150px;
+                    height: 145px;
+                }
+
+                h3{
+                    margin: 9px;
+                    font-size: 17px; 
+                }
+
+                h4{
+                    font-size: 13px;
+                    margin: 7px;
+                }
+
+            }    
+        }    
+    }
+}

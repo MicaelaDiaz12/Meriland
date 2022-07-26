@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+//variables
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/carousel";
+
+//variables
+@import "./variables/extend";
+@import "./variables/mixins";
+
+//partials
+@import"./partials/tipografia";
+
+//layout
+@import "./layout/footer";
+
+//secciones
+@import './secciones/nosotros';
+@import "./secciones/nuevo";
+@import "./secciones/cuenta";
+@import "./secciones/index";
+@import "./secciones/tienda";
+
